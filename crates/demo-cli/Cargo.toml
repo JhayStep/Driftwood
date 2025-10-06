@@ -1,0 +1,11 @@
+[package]
+name = "demo-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1"
+crdt-core = { path = "../crdt-core" }
+bincode = "1"
+serde = { version = "1", features = ["derive"] }

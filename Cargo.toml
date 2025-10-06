@@ -1,0 +1,7 @@
+[workspace]
+members = [
+  "crates/crdt-core",
+  "crates/sync-node",
+  "crates/demo-cli",
+]
+resolver = "2"
