@@ -1,1 +1,14 @@
+# Rust build output
 /target/
+
+# Driftwood runtime databases
+/data/
+/data-node-*/
+
+# Demo CLI generated note files
+*.bin
+
+# Editor / OS files
+.vscode/
+.DS_Store
+Thumbs.db
