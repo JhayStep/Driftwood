@@ -7,6 +7,6 @@ pub type DocId = String; // e.g., note id
 pub enum Msg {
     Hello { node_id: String },
     StateDigest { counts: BTreeMap<DocId, u64> }, // anti-entropy summary (per-doc version)
-    Delta { doc: DocId, bytes: Vec<u8> },         // serialized delta (simple: full merge chunk for now)
+    Delta { doc: DocId, bytes: Vec<u8> }, // serialized delta (simple: full merge chunk for now)
     Pull { doc: DocId },
 }
