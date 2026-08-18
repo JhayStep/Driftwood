@@ -38,15 +38,6 @@ impl Storage {
         Ok(())
     }
 
-    pub fn get_version(&self, id: &str) -> Result<u64> {
-        let versions = self.db.open_tree(VERSION_TREE)?;
-
-        match versions.get(id)? {
-            Some(bytes) => decode_version(&bytes),
-            None => Ok(0),
-        }
-    }
-
     pub fn digest(&self) -> Result<BTreeMap<String, u64>> {
         let versions = self.db.open_tree(VERSION_TREE)?;
         let mut digest = BTreeMap::new();
